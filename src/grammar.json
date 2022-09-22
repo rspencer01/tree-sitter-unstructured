@@ -3,7 +3,7 @@
   "rules": {
     "source_file": {
       "type": "PATTERN",
-      "value": "(.*\\n)+"
+      "value": "(.*\\r?\\n)+"
     }
   },
   "extras": [],

@@ -63,10 +63,12 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 0:
       if (eof) ADVANCE(2);
       if (lookahead == '\n') ADVANCE(3);
+      if (lookahead == '\r') ADVANCE(1);
       if (lookahead != 0) ADVANCE(1);
       END_STATE();
     case 1:
       if (lookahead == '\n') ADVANCE(3);
+      if (lookahead == '\r') ADVANCE(1);
       if (lookahead != 0) ADVANCE(1);
       END_STATE();
     case 2:
@@ -75,6 +77,7 @@ static bool ts_lex(TSLexer *lexer, TSStateId state) {
     case 3:
       ACCEPT_TOKEN(aux_sym_source_file_token1);
       if (lookahead == '\n') ADVANCE(3);
+      if (lookahead == '\r') ADVANCE(1);
       if (lookahead != 0) ADVANCE(1);
       END_STATE();
     default:
