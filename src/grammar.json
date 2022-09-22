@@ -1,0 +1,16 @@
+{
+  "name": "unstructured",
+  "rules": {
+    "source_file": {
+      "type": "PATTERN",
+      "value": "(.*\\n)+"
+    }
+  },
+  "extras": [],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}
+
